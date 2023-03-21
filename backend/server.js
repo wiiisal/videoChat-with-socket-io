@@ -6,8 +6,6 @@ const io = require("socket.io")(server)
 app.use(
     cors({
         origin:"http://localhost:3000",
-        credentials:false,
-        optionsSuccessStatus:200,
 		methods: [ "GET", "POST" ]
     })
 )
@@ -30,6 +28,6 @@ io.on("connection", (socket) => {
 	})
 })
 
-server.listen(3002,()=>{
-    console.log('live stream socket on port 3002')
+server.listen(5000,()=>{
+    console.log('live stream socket on port 5000')
 })
